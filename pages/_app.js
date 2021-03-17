@@ -1,4 +1,3 @@
-import { fontFace } from "polished";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Head from "next/head";
 import colors from "../data/colors.json";
@@ -50,6 +49,7 @@ const getTheme = () => {
   const colorTheme = colors[themeIndex].colors;
 
   return {
+    themeId: colors[themeIndex].id,
     background: "#e6eff2",
     themeFg: colorTheme[0],
     themeBg: colorTheme[1],

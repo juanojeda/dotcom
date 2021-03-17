@@ -61,7 +61,7 @@ export default function Home() {
                 isBlock
               />
               <SquishyLink
-                href="https://www.linkedin.com/in/juan-ojeda-a275b68/"
+                href="https://www.linkedin.com/in/juan-ojeda/"
                 linkText="LinkedIn"
                 isBlock
               />
