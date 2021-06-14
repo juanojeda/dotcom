@@ -44,15 +44,18 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const getRandom = (length) => Math.floor(Math.random() * length);
+
 const getTheme = () => {
-  const themeIndex = Math.floor(Math.random() * colors.length); // gets a random number between 0 and colors.length
-  const colorTheme = colors[themeIndex].colors;
+  const darkLength = colors.dark.length;
+  const lightLength = colors.light.length;
+  const light = colors.light[getRandom(lightLength)];
+  const dark = colors.dark[getRandom(darkLength)];
 
   return {
-    themeId: colors[themeIndex].id,
     background: "#e6eff2",
-    themeFg: colorTheme[0],
-    themeBg: colorTheme[1],
+    themeFg: light,
+    themeBg: dark,
     ...theme,
   };
 };
